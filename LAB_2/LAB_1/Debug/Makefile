@@ -37,6 +37,9 @@ SUBDIRS :=  \
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS +=  \
+../scr/button.c \
+../scr/led.c \
+../scr/lcd.c \
 ../scr/main.c \
 ../scr/uart_stdio.c
 
@@ -48,21 +51,33 @@ ASM_SRCS +=
 
 
 OBJS +=  \
+scr/button.o \
+scr/led.o \
+scr/lcd.o \
 scr/main.o \
 scr/uart_stdio.o
 
 
 OBJS_AS_ARGS +=  \
+scr/button.o \
+scr/led.o \
+scr/lcd.o \
 scr/main.o \
 scr/uart_stdio.o
 
 
 C_DEPS +=  \
+scr/button.d \
+scr/led.d \
+scr/lcd.d \
 scr/main.d \
 scr/uart_stdio.d
 
 
 C_DEPS_AS_ARGS +=  \
+scr/button.d \
+scr/led.d \
+scr/lcd.d \
 scr/main.d \
 scr/uart_stdio.d
 
@@ -76,6 +91,12 @@ ADDITIONAL_DEPENDENCIES:=
 OUTPUT_FILE_DEP:= ./makedep.mk
 
 # AVR32/GNU C Compiler
+
+
+
+
+
+
 
 
 
