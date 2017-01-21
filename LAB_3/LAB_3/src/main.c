@@ -1,17 +1,16 @@
 /*
- * LAB3.c
+ * main.cpp
  *
- * Created: 10/4/2016 11:14:51 PM
- *  Author: schid
+ * Created: 21.01.2017 03:47:37
+ *  Author: Schidu Vasile
  */ 
+
 
 #include <avr/io.h>
 #include "button.h"
 #include "lm20.h"
 #include "lcd.h"
 #include <avr/delay.h>
-
-
 
 int main(void) {
 	
@@ -34,19 +33,19 @@ int main(void) {
 			if(isButtonTwoPressed()) {
 				LCDClear();
 				LCDWriteString("Fahrenheit:");
-				LCDWriteIntXY(1, 1, convertCelsiusToFahrenheit(getTemp()),3);
+				LCDWriteIntXY(1, 1, convertCelsiusToFahrenheit(getTemp())+2,3);
 				printf("Fahrenheit: %d\n", convertCelsiusToFahrenheit(getTemp()));
 			}else {
 				LCDClear();
 				LCDWriteString("Kelvin:");
-				LCDWriteIntXY(1, 1, convertCelsiusToKelvin(getTemp()),3);
+				LCDWriteIntXY(1, 1, convertCelsiusToKelvin(getTemp())+4,3);
 				printf("Kelvin: %d\n", convertCelsiusToKelvin(getTemp()));
 			}			
 			
 		} else {
 			LCDClear();
 			LCDWriteString("Celsius:");
-			LCDWriteIntXY(1, 1, getTemp(),3);
+			LCDWriteIntXY(1, 1, getTemp()+4,3);
 			printf("Celsius : %d\n", getTemp());
 		}						
     }

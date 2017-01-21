@@ -1,5 +1,6 @@
 #include "uart_stdio.h"
 #define UART_BAUD 9600
+#define F_CPU 8000000UL
 
 FILE uart_output = FDEV_SETUP_STREAM(uart_stdio_PutChar, NULL, _FDEV_SETUP_WRITE);
 

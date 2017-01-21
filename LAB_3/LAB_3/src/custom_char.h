@@ -3,6 +3,7 @@ Custom char set for alphanumeric LCD Module
 Created by eXtreme Electronics
 LCD Custom Char Builder!
 
+Visit http://www.eXtremeElectronics.co.in
 */
 
 #ifndef __CUSTOMCHAR_H
