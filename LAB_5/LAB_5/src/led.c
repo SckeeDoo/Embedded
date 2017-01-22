@@ -2,7 +2,7 @@
  * led.c
  *
  *  Created on: Jan 21, 2017
- *      Author: lschidu
+ *      Author: Schidu Vasile
  */
 
 #include "led.h"
