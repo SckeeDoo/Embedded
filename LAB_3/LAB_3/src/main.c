@@ -33,19 +33,19 @@ int main(void) {
 			if(isButtonTwoPressed()) {
 				LCDClear();
 				LCDWriteString("Fahrenheit:");
-				LCDWriteIntXY(1, 1, convertCelsiusToFahrenheit(getTemp())+2,3);
+				LCDWriteIntXY(1, 1, convertCelsiusToFahrenheit(getTemp()),3);
 				printf("Fahrenheit: %d\n", convertCelsiusToFahrenheit(getTemp()));
 			}else {
 				LCDClear();
 				LCDWriteString("Kelvin:");
-				LCDWriteIntXY(1, 1, convertCelsiusToKelvin(getTemp())+4,3);
+				LCDWriteIntXY(1, 1, convertCelsiusToKelvin(getTemp()),3);
 				printf("Kelvin: %d\n", convertCelsiusToKelvin(getTemp()));
 			}			
 			
 		} else {
 			LCDClear();
 			LCDWriteString("Celsius:");
-			LCDWriteIntXY(1, 1, getTemp()+4,3);
+			LCDWriteIntXY(1, 1, getTemp(),3);
 			printf("Celsius : %d\n", getTemp());
 		}						
     }
