@@ -1,9 +1,4 @@
-/*
- * adc.c
- *
- * Created: 10/4/2016 11:40:30 PM
- *  Author: schid
- */ 
+
 #include "adc.h"
 #include <avr/io.h>
 int data;
