@@ -4,8 +4,10 @@
 int data;
 
 void initADC() {
-
+	//For selecting the reference voltage and the input channel.
 	ADMUX = (1 << REFS0);
+	
+	//Status of ADC enable or desable
 	ADCSRA = (1 << ADEN) | (1 << ADPS2) | (1 << ADPS1) | (1 << ADPS0);
 }
 
