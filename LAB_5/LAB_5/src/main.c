@@ -10,22 +10,18 @@
 // Interrupt Routines
 // ********************************************************************************
 
-uint32_t counter = 0;
+uint32_t i = 0;
 
 // timer0 overflow
 ISR(TIMER1_OVF_vect) {
-   // XOR PORTA with 0x01 to toggle the second bit up
-    turn_off(0);
+    	turn_off(0);
 	turn_off(1);
 	turn_off(2);
-	turn_off(3);
-	turn_off(4);
-	turn_off(5);
-	toggle_led(counter);
-	counter++;
+	toggle_led(i);
+	i++;
 	
-	if(counter >= 6) {
-		counter = 0;
+	if(i >= 2) {
+		i = 0;
 	}
 	
 	
