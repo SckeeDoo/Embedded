@@ -2,7 +2,7 @@
  * lm20.c
  *
  * Created: 10/4/2016 11:39:38 PM
- *  Author: schid
+ *  Author: schidu vasile
  */ 
 #include "lm20.h"
 
