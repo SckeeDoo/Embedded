@@ -2,7 +2,7 @@
  * L293.c
  *
  *  Created on: Jan 17, 2017
- *      Author: lschidu
+ *      Author: schidu vasile
  */
 
 #include <avr/io.h>
