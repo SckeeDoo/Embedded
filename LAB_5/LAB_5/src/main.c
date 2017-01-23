@@ -23,23 +23,20 @@ ISR(TIMER1_OVF_vect) {
 	if(i >= 2) {
 		i = 0;
 	}
-	
-	
 }
 
-// ********************************************************************************
-// Main
-// ********************************************************************************
+
 int main( void ) {
     // Configure PORTA as output
     DDRA = 0xFF;
     PORTA = 0x00;
 	
-    // enable timer overflow interrupt for both Timer0 and Timer1
+    //Enable Overflow Interrupt Enable for Timer 0 and Timer 1
     TIMSK=(1<<TOIE0) | (1<<TOIE1);
     // set timer0 counter initial value to 0
     TCNT1=0x00;
 
+    // Prescaler = FCPU/1024
     TCCR1B |= (1 << CS01);
     // enable interrupts
     sei();
